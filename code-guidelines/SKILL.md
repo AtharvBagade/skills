@@ -1,5 +1,5 @@
 ---
-name: karpathy-guidelines
+name: code-guidelines
 description: Behavioral guidelines to reduce common LLM coding mistakes. Use when writing, reviewing, or refactoring code to avoid overcomplication, make surgical changes, surface assumptions, and define verifiable success criteria.
 license: MIT
 ---
@@ -30,6 +30,13 @@ Before implementing:
 - No error handling for impossible scenarios.
 - If you write 200 lines and it could be 50, rewrite it.
 
+### Code Limits & Structure
+- **File Length:** No file should exceed 500 lines of code (LOC). If a file exceeds this limit, break the code down into logical, modular components and distribute them across separate files.
+
+### Naming Conventions
+- **Variables:** Variable names must be written in full and clearly justify the data they hold. Avoid cryptic abbreviations.
+- **Functions:** Function names must be specific, concise, and exactly justify what they do.
+
 Ask yourself: "Would a senior engineer say this is overcomplicated?" If yes, simplify.
 
 ## 3. Surgical Changes
@@ -58,10 +65,10 @@ Transform tasks into verifiable goals:
 - "Refactor X" → "Ensure tests pass before and after"
 
 For multi-step tasks, state a brief plan:
-```
-1. [Step] → verify: [check]
-2. [Step] → verify: [check]
-3. [Step] → verify: [check]
-```
+1.[Step] → verify: [check]
+
+2.[Step] → verify: [check]
+
+3.[Step] → verify: [check]
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
