@@ -21,6 +21,7 @@ A comprehensive operational guide for transforming raw LLM conversations, techni
 ## Non negotiables
 - No Emojis whatsoever in headings, text or page titles.
 - If you find pages with emojis updates them to remove emojis.
+- Every page must be strictly nested under its designated taxonomic parent. Orphan, floating, or root-level pages (outside of primary Root Domains) are strictly prohibited.
 
 ## 1. Lifecycle Metadata
 
@@ -55,6 +56,15 @@ To keep pathways predictable, map new pages against these structural blueprints:
 - `Software Engineering → Server-Side → NestJS → Testing Strategies`
 - `Software Engineering → IoT → Protocols → MQTT & State Management`
 - `Finance → Equities → Indian Markets → Stock Analysis`
+
+### Parent Page & Nesting Rules
+
+To keep the workspace clean, organized, and discoverable, follow these structural rules for nesting and parent-child relationships:
+
+- **Strict Path Traversing:** Every page must trace back through the taxonomy to a Root Domain. Determine the exact path before creating the page (e.g., `Software Engineering → Server-Side → NestJS → Testing Strategies`).
+- **Intermediate Parent Creation:** If the exact parent page in the taxonomy does not yet exist, you must create the missing intermediate parent pages first. Never bypass levels in the hierarchy (e.g., do not nest a `Testing Strategies` page directly under `Software Engineering` if the intermediate folders/pages `Server-Side` and `NestJS` are missing).
+- **Zero Orphan Pages:** Never create a floating or orphan page at the root level of the workspace, or as a direct child of a random unrelated page. The only allowed top-level pages are the official **Root Domains**.
+- **Verify Parent Relationship:** When using API-based tools, scripts, or automations to create pages, you must explicitly provide the correct `parent_id` matching the immediate category page. Always verify the link hierarchy after creation.
 
 ---
 
