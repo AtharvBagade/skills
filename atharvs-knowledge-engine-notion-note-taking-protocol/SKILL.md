@@ -43,8 +43,11 @@ Organization follows a **Domain-Driven Nested Branching** methodology. The root 
 ### Root Domains
 
 - **AI:** All things machine learning, neural networks, inference infrastructure, and prompt engineering.
-- **Software Engineering:** Systems design, language ecosystems, runtime environments, API protocols, and deployment strategies.
+- **Software:** Systems design, language ecosystems, runtime environments, API protocols, and deployment strategies.
 - **Finance:** Market research, quantitative analysis, portfolio management, and asset tracking.
+- **LLM Knowledge Base:** The client-agnostic reference layer that any AI client (Claude, Claude Code, ChatGPT, local models) reads: local LLM environment facts, learning roadmap notes, project plans, and the automation inventory. Concept and topic notes stay under AI or Software; this domain links to them instead of duplicating them. Roadmap and milestone tracking lives in Linear, and this domain holds the notes that Linear refers to.
+- **Interview Prep:** Root hub for interview-oriented practice across every domain. Organized as one subpage per domain, each holding one page per topic covered in learning sessions, plus the LeetCode problem notes.
+- **Podcast Notes:** Notes from podcast episodes, organized by show and then by episode.
 
 ### Standard Taxonomy Examples
 
@@ -52,17 +55,21 @@ To keep pathways predictable, map new pages against these structural blueprints:
 
 - `AI → LLMs → Fundamentals → Math`
 - `AI → Infrastructure → Vector Databases → Indexing Mechanics`
-- `Software Engineering → Server-Side → Rust → Memory Management`
-- `Software Engineering → Server-Side → NestJS → Testing Strategies`
-- `Software Engineering → IoT → Protocols → MQTT & State Management`
+- `Software → Server-Side → Rust → Memory Management`
+- `Software → Server-Side → NestJS → Testing Strategies`
+- `Software → IoT → Protocols → MQTT & State Management`
 - `Finance → Equities → Indian Markets → Stock Analysis`
+- `LLM Knowledge Base → Local LLM Environment → Mac mini M4 Pro Setup`
+- `LLM Knowledge Base → Projects → Automation Inventory`
+- `Interview Prep → AI → Hybrid Search, RRF & Reranking: Interview Questions`
+- `Podcast Notes → Dwarkesh Patel → Ilya Sutskever on the End of Pre-training, RL, and Redefining AGI`
 
 ### Parent Page & Nesting Rules
 
 To keep the workspace clean, organized, and discoverable, follow these structural rules for nesting and parent-child relationships:
 
-- **Strict Path Traversing:** Every page must trace back through the taxonomy to a Root Domain. Determine the exact path before creating the page (e.g., `Software Engineering → Server-Side → NestJS → Testing Strategies`).
-- **Intermediate Parent Creation:** If the exact parent page in the taxonomy does not yet exist, you must create the missing intermediate parent pages first. Never bypass levels in the hierarchy (e.g., do not nest a `Testing Strategies` page directly under `Software Engineering` if the intermediate folders/pages `Server-Side` and `NestJS` are missing).
+- **Strict Path Traversing:** Every page must trace back through the taxonomy to a Root Domain. Determine the exact path before creating the page (e.g., `Software → Server-Side → NestJS → Testing Strategies`).
+- **Intermediate Parent Creation:** If the exact parent page in the taxonomy does not yet exist, you must create the missing intermediate parent pages first. Never bypass levels in the hierarchy (e.g., do not nest a `Testing Strategies` page directly under `Software` if the intermediate folders/pages `Server-Side` and `NestJS` are missing).
 - **Zero Orphan Pages:** Never create a floating or orphan page at the root level of the workspace, or as a direct child of a random unrelated page. The only allowed top-level pages are the official **Root Domains**.
 - **Verify Parent Relationship:** When using API-based tools, scripts, or automations to create pages, you must explicitly provide the correct `parent_id` matching the immediate category page. Always verify the link hierarchy after creation.
 
